@@ -1,0 +1,28 @@
+name: Package and deploy Labspace
+
+env:
+  DOCKERHUB_REPO: your-dockerhub-username/labspace-name
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to DockerHub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Publish Labspace
+        uses: dockersamples/publish-labspace-action@v2
+        with:
+          target_repo: ${{ env.DOCKERHUB_REPO }}
