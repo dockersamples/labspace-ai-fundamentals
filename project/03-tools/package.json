@@ -1,0 +1,9 @@
+{
+  "name": "03-tools",
+  "version": "1.0.0",
+  "description": "Tool calling and the agentic loop",
+  "main": "index.js",
+  "dependencies": {
+    "openai": "^4.0.0"
+  }
+}

@@ -1,25 +1,27 @@
 metadata:
-  id: dockersamples/labspace-ai-fundamentals
+  id: ai-fundamentals
   sourceRepo: github.com/dockersamples/labspace-ai-fundamentals
-  contentVersion: abcd123 # Will be filled in during CI
+  contentVersion: 1.0.0
 
-title: Labspace starter
-description: |
-  A basic template for creating a Labspace, including all of the boilerplate needed to write and publish a Labspace.
+title: AI Fundamentals for Developers
+description: Learn the core concepts of AI development — models, prompt engineering, tool calling, and RAG — through hands-on exercises in a live environment.
 
 sections:
-  - title: Introduction
+  - title: Welcome & Setup
     contentPath: 01-introduction.md
-  - title: Main Content 1
-    contentPath: 02-main-content.md
-  - title: Conclusion
-    contentPath: 03-conclusion.md
+  - title: Talking to Models
+    contentPath: 02-talking-to-models.md
+  - title: Prompt Engineering
+    contentPath: 03-prompt-engineering.md
+  - title: Tool Calling
+    contentPath: 04-tool-calling.md
+  - title: "RAG: Grounding Models in Your Data"
+    contentPath: 05-rag.md
+  - title: Wrap-up
+    contentPath: 06-conclusion.md
 
-# Services are used to add default tabs in the Labspace interface.
-# The IDE will always be present as a service, but you can add additional services as needed.
-# Icon values come from https://fonts.google.com/icons/
 services:
-  - id: app
-    url: http://localhost:3000
-    title: App
-    icon: anchor
+  - id: chatbot
+    title: Visual Chatbot
+    url: http://localhost:3050
+    icon: chat

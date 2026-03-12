@@ -1,0 +1,9 @@
+{
+  "name": "02-prompts",
+  "version": "1.0.0",
+  "description": "Prompt engineering examples: few-shot and structured output",
+  "main": "index.js",
+  "dependencies": {
+    "openai": "^4.0.0"
+  }
+}

@@ -3,19 +3,23 @@ services:
     environment:
       PROJECT_CLONE_URL: https://github.com/dockersamples/labspace-ai-fundamentals
 
-  # workspace:
-  #   # Override the default image if desired
-  #   # More details - https://github.com/dockersamples/labspace-infra/blob/main/docs/configuration.md#overriding-the-workspace-image
-  #   image: dockersamples/labspace-workspace-java
+  workspace:
+    image: dockersamples/labspace-workspace-node
+    environment:
+      OPENAI_BASE_URL: http://model-runner.docker.internal/engines/v1
+      OPENAI_API_KEY: not-required
+      OPENAI_MODEL: ai/llama3.2:3B-Q4_K_M
 
-  #   # Override the default ports to publish additional ports you may need
-  #   # More details - https://github.com/dockersamples/labspace-infra/blob/main/docs/configuration.md#overriding-the-workspace-ports
-  #   ports: !override
-  #     - "6274:6274" # Expose the MCP inspector users will launch from inside the Labspace
-  #     - "8080:8080" # The port used by the app
+  visual-chatbot:
+    image: mikesir87/visual-chatbot
+    use_api_socket: true
+    ports:
+      - 3050:3000
+    models:
+      llama3:
+        endpoint_var: OPENAI_BASE_URL
+        model_var: OPENAI_MODEL
 
-  #   # Add other environment variables as needed
-  #   environment:
-  #     DANGEROUSLY_OMIT_AUTH: "true" # Skip auth for the MCP Inspector
-
-# Add other models or services your Labspace may need
+models:
+  llama3:
+    model: ai/llama3.2:3B-Q4_K_M

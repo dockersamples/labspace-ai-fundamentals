@@ -1,0 +1,9 @@
+{
+  "name": "01-models",
+  "version": "1.0.0",
+  "description": "Basic model interaction example",
+  "main": "index.js",
+  "dependencies": {
+    "openai": "^4.0.0"
+  }
+}

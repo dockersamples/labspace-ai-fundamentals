@@ -1,0 +1,19 @@
+Product Frequently Asked Questions
+
+What integrations does the product support?
+The product provides native integrations with Slack, Microsoft Teams, Jira, GitHub, GitLab, and Salesforce. A REST API and webhook system are available for building custom integrations. An official Zapier app is available for no-code connections to thousands of third-party services.
+
+How is customer data stored and secured?
+All customer data is stored in SOC 2 Type II certified data centers in the United States and European Union. Data is encrypted at rest using AES-256 encryption and in transit using TLS 1.3. Customer data is logically isolated at the database layer using row-level security policies.
+
+What are the available pricing plans?
+The Starter plan is free for teams of up to five users and includes all core features. The Pro plan is $15 per user per month and adds advanced analytics, SSO, priority support, and unlimited API access. The Enterprise plan is custom-priced and includes dedicated infrastructure, custom SLAs, a dedicated customer success manager, and custom contract terms.
+
+What uptime SLA does the product guarantee?
+Pro customers are guaranteed 99.9% uptime, which equates to fewer than nine hours of unplanned downtime per year. Enterprise customers can negotiate enhanced SLAs of up to 99.99%, which allows fewer than one hour of downtime per year. Live uptime status and historical incident reports are published on the public status page.
+
+How do I export my data?
+Data exports can be initiated from the Settings page under the Data Management section. Exports are available in CSV, JSON, and Excel formats. For accounts with large data volumes, exports are processed asynchronously and the account owner receives an email with a secure download link when the export is ready. Export files are available for download for seven days before being deleted.
+
+Is there a mobile application?
+Native iOS and Android applications are available for Pro and Enterprise customers. The mobile app supports all core features including viewing, creating, commenting, and receiving push notifications. The iOS app requires iOS 15 or later. The Android app requires Android 11 or later. Push notification preferences can be configured per workspace in the app settings.

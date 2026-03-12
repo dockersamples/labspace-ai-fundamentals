@@ -1,0 +1,19 @@
+Engineering Team Guidelines and Standards
+
+Code Review Process
+All code changes must be submitted as a pull request and reviewed by at least one other engineer before merging into the main branch. Changes that affect core business logic, shared libraries, or production infrastructure require approval from two reviewers. Reviewers are expected to respond within one business day. The PR author is responsible for addressing all feedback and obtaining the necessary approvals before merging.
+
+Branching Strategy
+The main branch must always be in a deployable state. All work is done on short-lived feature branches created from main. Branch names must follow the convention: type/short-description, for example feat/user-authentication or fix/login-redirect. Branches should be rebased against main at least daily to minimize merge conflicts and keep diffs small.
+
+Testing Requirements
+All new features require unit tests achieving at least 80% code coverage for the new code added. Integration tests are required for any new or modified API endpoints. End-to-end tests must cover all critical user-facing flows. All tests must pass in the CI pipeline before a pull request can be approved and merged.
+
+On-Call Responsibilities
+Engineers participate in a weekly on-call rotation. The on-call engineer must acknowledge production incidents within 15 minutes of being paged. An on-call stipend of $200 is paid for each week an engineer is on-call. Incident post-mortems are required within 48 hours for any P1 or P2 severity incident, using the standard post-mortem template.
+
+Deployment Process
+Planned deployments to production occur every Tuesday and Thursday. Emergency fixes may be deployed outside this window with approval from a team lead or engineering manager. All deployments require the automated test suite to pass in the staging environment first. Infrastructure or shared service changes require a peer review of the deployment plan in addition to code review.
+
+Documentation Standards
+All public-facing APIs must be documented using the OpenAPI specification. Internal services must maintain a README covering local setup, architecture decisions, and operational runbooks. Documentation must be updated in the same pull request as the code changes it describes. Architecture decision records (ADRs) are required for any significant technical choices that affect multiple teams.

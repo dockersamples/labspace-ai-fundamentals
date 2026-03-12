@@ -1,0 +1,9 @@
+{
+  "name": "04-rag",
+  "version": "1.0.0",
+  "description": "Retrieval-Augmented Generation (RAG) example",
+  "main": "index.js",
+  "dependencies": {
+    "openai": "^4.0.0"
+  }
+}
