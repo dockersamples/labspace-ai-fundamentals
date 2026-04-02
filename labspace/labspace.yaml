@@ -15,7 +15,7 @@ sections:
     contentPath: 03-prompt-engineering.md
   - title: Tool Calling
     contentPath: 04-tool-calling.md
-  - title: "RAG: Grounding Models in Your Data"
+  - title: Retrieval Augmented Generation (RAG)
     contentPath: 05-rag.md
   - title: Wrap-up
     contentPath: 06-conclusion.md
