@@ -99,7 +99,7 @@ Now it's time to write code that does the same thing. You'll use the `openai` np
 
     ```javascript
     const response = await openai.chat.completions.create({
-        model: process.env.OPENAI_MODEL,
+        model: MODEL,
         messages: [
             {
                 role: "system",
