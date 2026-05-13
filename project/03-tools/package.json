@@ -4,6 +4,6 @@
   "description": "Tool calling and the agentic loop",
   "main": "index.js",
   "dependencies": {
-    "openai": "^4.0.0"
+    "openai": "^6.37.0"
   }
 }
